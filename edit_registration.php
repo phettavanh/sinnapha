@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     if (file_exists($file)) {
         $lines = file($file);
         foreach ($lines as $line) {
-            list($fn, $ln, $rm, $student_id, $fa, $mo, $ph, $gr, $dob, $dt, $yr) = explode(",", trim($line));
+            list($fn, $ln, $rm, $student_id, $fa, $mo, $ph, $gr, $dob, $dt, $yr, $my) = explode(",", trim($line));
             if ($student_id == $id) {
                 $first_name = $fn;
                 $last_name = $ln;
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
                 $dob = $dob;
                 $date = $dt;
                 $year = $yr;
+                $money = $my;
                 break;
             }
         }
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['student_id'])) {
     $lines = file($file);
     $new_lines = [];
     foreach ($lines as $line) {
-        list($fn, $ln, $rm, $student_id, $fa, $mo, $ph, $gr, $dob, $dt, $yr) = explode(",", trim($line));
+        list($fn, $ln, $rm, $student_id, $fa, $mo, $ph, $gr, $dob, $dt, $yr, $my) = explode(",", trim($line));
         if ($student_id == $_POST['student_id']) {
             $fn = htmlspecialchars($_POST['first_name']);
             $ln = htmlspecialchars($_POST['last_name']);
@@ -40,8 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['student_id'])) {
             $dob = htmlspecialchars($_POST['dob']);
             $dt = htmlspecialchars($_POST['date']);
             $yr = htmlspecialchars($_POST['year']);
+            $my = htmlspecialchars($_POST['money']);
         }
-        $new_lines[] = "$fn,$ln,$rm,$student_id,$fa,$mo,$ph,$gr,$dob,$dt,$yr";
+        $new_lines[] = "$fn,$ln,$rm,$student_id,$fa,$mo,$ph,$gr,$dob,$dt,$yr,$my";
     }
     file_put_contents($file, implode("\n", $new_lines));
     header("Location: view_registrations.php");
@@ -119,6 +121,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['student_id'])) {
                 <label for="year">ສົກຮຽນ:</label>
                 <input type="text" class="form-control" id="year" name="year" value="<?= htmlspecialchars($year) ?>" required>
             </div>
+            <div class="form-group">
+                <label for="money">ຈຳນວນເງິນ:</label>
+                <input type="text" class="form-control" id="money" name="money" required readonly value="200.000 KIP" required>
+                </div>
             <button type="submit" class="btn btn-primary btn-block">ບັນທຶກແກ້ໄຂ</button>
         </form>
     </div>

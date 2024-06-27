@@ -27,36 +27,12 @@
     <div class="container">
     <a href="index.php" class="btn btn-secondary mb-3" style="background-color: #007bff; color: #fff;">
     <i class="fas fa-arrow-left"></i> ກັບຫາໜ້າຫນ້າຫຼັກ </a>
-        <h1>ລົງທະບຽນ</h1>
+        <h1>ລົງທະບຽນຈ່າຍຄ່າຮຽນ</h1>
         <form action="save_registration.php" method="post">
             <input type="hidden" name="id" value="">
             <div class="form-group">
-                <label for="first_name">ຊື້:</label>
+                <label for="first_name">ລະຫັດ:</label>
                 <input type="text" class="form-control" id="first_name" name="first_name" required>
-            </div>
-            <div class="form-group">
-                <label for="last_name">ນາມສະກຸນ:</label>
-                <input type="text" class="form-control" id="last_name" name="last_name" required>
-            </div>
-            <div class="form-group">
-                <label for="room">ຫ້ອງ:</label>
-                <input type="text" class="form-control" id="room" name="room" required>
-            </div>
-            <div class="form-group">
-                <label for="student_id">ID:</label>
-                <input type="text" class="form-control" id="student_id" name="student_id" required>
-            </div>
-            <div class="form-group">
-                <label for="father_name">ພໍ່:</label>
-                <input type="text" class="form-control" id="father_name" name="father_name" required>
-            </div>
-            <div class="form-group">
-                <label for="mother_name">ແມ່:</label>
-                <input type="text" class="form-control" id="mother_name" name="mother_name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">ເບີໂທລະສັບ:</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
             </div>
             <div class="form-group">
                 <label for="gender">ເພດ:</label>
@@ -68,18 +44,57 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="last_name">ຊື່</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="room">ນາມສະກຸນ</label>
+                <input type="text" class="form-control" id="room" name="room" required>
+            </div>
+            <div class="form-group">
                 <label for="dob">ວັນເດືອນປີເກີດ:</label>
                 <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="student_id">ບ້ານຢູ່ປະຈຸບັນ</label>
+                <input type="text" class="form-control" id="student_id" name="student_id" required>
+            </div>
+            <div class="form-group">
+                <label for="father_name">ຊົນເຜົ່າ</label>
+                <input type="text" class="form-control" id="father_name" name="father_name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">ເບີໂທລະສັບ:</label>
+                <input type="text" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="mother_name">ຊື່ຜູ້ປົກຄອງ</label>
+                <input type="text" class="form-control" id="mother_name" name="mother_name" required>
+            </div>
+            <div class="form-group">
+                <label for="mother_name">ເບີໂທລະສັບ</label>
+                <input type="text" class="form-control" id="mother_name" name="mother_name" required>
+            </div>
+            <div class="form-group">
+                <label for="year">ຫ້ອງ</label>
+                <input type="text" class="form-control" id="year" name="year" required>
+            </div>
+            <div class="form-group">
+                <label for="year">ສົກຮຽນ:</label>
+                <input type="text" class="form-control" id="year" name="year" required>
             </div>
             <div class="form-group">
                 <label for="date">ວັນທີ່:</label>
                 <input type="date" class="form-control" id="date" name="date" required>
             </div>
             <div class="form-group">
-                <label for="year">ສົກຮຽນ:</label>
-                <input type="text" class="form-control" id="year" name="year" required>
-            </div>
+                <label for="money">ຈຳນວນເງິນ:</label>
+                <input type="text" class="form-control" id="money" name="money" value="200.000 KIP"
+                </div>
+
+                </select>
             <button type="submit" class="btn btn-primary btn-block">ລົງທະບຽນ</button>
+
         </form>
         <a href="view_registrations.php" class="btn btn-secondary btn-block mt-3">ຂໍ້ມູນລົງທະບຽນ</a>
         <a href="search_registration.php" class="btn btn-secondary btn-block mt-3">ຄົ້ນຫາຂໍ້ມູນລົງທະບຽນ</a>

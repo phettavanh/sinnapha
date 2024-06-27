@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ລາຍຊື້ລົງທະບຽນ</title>
+    <title>ລາຍຊື່ລົງທະບຽນ</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -35,7 +35,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>ລາຍຊື້ລົງທະບຽນ</h1>
+        <h1>ລາຍຊືລົງທະບຽນ</h1>
         <?php
         $file = 'registrations.txt';
         if (file_exists($file) && filesize($file) > 0) {
@@ -55,12 +55,13 @@
                             <th>ວັນເດືອນປີເກີດ</th>
                             <th>ວັນທີ່</th>
                             <th>ສົກຮຽນ</th>
+                            <th>ຄ່າຮຽນ</th>
                             <th>ແກ້ໄຂ</th>
                         </tr>
                       </thead>";
                 echo "<tbody>";
                 foreach ($lines as $line) {
-                    list($fn, $ln, $rm, $id, $fa, $mo, $ph, $gender, $dob, $dt, $yr) = explode(",", trim($line));
+                    list($fn, $ln, $rm, $id, $fa, $mo, $ph, $gender, $dob, $dt, $yr, $my) = explode(",", trim($line));
                     echo "<tr>
                             <td>$fn</td>
                             <td>$ln</td>
@@ -73,6 +74,7 @@
                             <td>$dob</td>
                             <td>$dt</td>
                             <td>$yr</td>
+                            <td>$my</td>
                             <td>
                                 <a href='edit_registration.php?id=$id' class='btn btn-warning btn-sm btn-edit'>ແກ້ໄຂ</a>
                             </td>

@@ -80,7 +80,7 @@
                             <td>$dt</td>
                             <td>$yr</td>
                             <td>
-                                <a href='edit_registration.php?id=$id' class='btn btn-warning btn-sm'>แก้ไข</a>
+                                <a href='edit_registration.php?id=$id' class='btn btn-warning btn-sm'>ແກ້ໄຂ</a>
                             </td>
                           </tr>";
                 }
@@ -90,7 +90,7 @@
                 echo "<p>ບໍ່ມີລາຍຊື່</p>";
             }
         } else {
-            echo "<p>กรุณากรอกข้อมูลค้นหา</p>";
+            echo "<p>ກະລຸນາເພີ່ມຂໍ້ມູນ</p>";
         }
         ?>
         <a href="search_registration.php" class="btn btn-secondary btn-block mt-3">ຄົ້ນຫາໃໝ່</a>

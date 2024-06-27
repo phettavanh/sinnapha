@@ -34,11 +34,21 @@ if(!isset($_SESSION['username'], $_SESSION['password'])){
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+.navbar {
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
+}
+ .navbar-brand {
+      font-size: 35px;
+    }
+</style>
+
+
 </head>
 <body>
 
-  <img class="logo" src="images/sinnapha-logo.jpg" style="width: 60px; height: 60px; float: left; margin-left: 5%; margin-top: 15px; " alt="logo_images">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-light ftco_navbar ftco-navbar-light" id="ftco-navbar" >
+	<nav class="navbar navbar-expand-lg navbar-darkbg-light ftco_navbar ftco-navbar-light" id="ftco-navbar" >
+  <img class="logo" src="images/sinnapha-logo.jpg" style="width: 60px; height: 60px; float: left; margin-left: 2%; " alt="logo_images">
   <a class="navbar-brand" href="about.php"   >ໂຮງຮຽນ ສິນນະພາ</a>
 
 	    <div class="container d-flex align-items-center">
@@ -48,7 +58,7 @@ if(!isset($_SESSION['username'], $_SESSION['password'])){
 	        	<li class="nav-item "><a href="index.php" class="nav-link pl-0"><b>ໜ້າຫຼັກ</b></a></li>
 				<li class="nav-item"><a href="student.php" class="nav-link"><b>ນັກຮຽນ</b></a></li>
 	        	<li class="nav-item"><a href="teacherDetail.php" class="nav-link"><b>ອາຈານ</b></a></li>
-            <li class="nav-item"><a href="register.php" class="nav-link"><b>ລົງທະບຽນ</b></a></li>
+            <li class="nav-item"><a href="view_registrations.php" class="nav-link"><b>ຂໍ້ມູນລົງທະບຽນ</b></a></li>
 	        	<li class="nav-item"><a href="grade.php" class="nav-link"><b>ຜົນຄະແນນ</b></a></li>
 				<li class="nav-item"><a href="subject.php" class="nav-link"><b>ວິຊາຮຽນ</b></a></li>
 				<li class="nav-item"><a href="room.php" class="nav-link"><b>ຫ້ອງຮຽນ</b></a></li>

@@ -9,7 +9,7 @@
     table {
       font-family: arial, sans-serif;
       border-collapse: collapse;
-      width: 100%;
+      width: 110%;
     }
     td,
     th {
@@ -45,8 +45,8 @@
   <div style="right: 0;" ><a href="add_student.php" class="btn btn-success" style="right: 5 px;" >ADD</a></div>
   <table>
     <tr>
-      <th>ລະຫັດ</th>
       <th>ລຳດັບ</th>
+      <th>ລະຫັດ</th>
       <th>ເພດ</th>
       <th>ຊື່ </th>
       <th>ນາມສະກຸນ</th>
@@ -77,8 +77,13 @@
         <td><?php echo $row['Parent'] ?></td>
         <td><?php echo $row['Par_tel'] ?></td>
         
-        <td> <a href="edit_student.php?id=<?php echo $row['st_id'] ?>"class="btn btn-primary  " >EDIT</a>
-            <a href="delete_student.php?id=<?php echo $row['st_id'] ?>" class="btn btn-danger">DEL</a></td>
+        <td> 
+          <a href="register.php?id=<?php echo $row['st_id'] ?>" class="btn btn-warning" style="color: #ffffff;">Register</a>
+            <a href="edit_student.php?id=<?php echo $row['st_id'] ?>"class="btn btn-primary " >EDIT</a>
+            <a href="delete_student.php?id=<?php echo $row['st_id'] ?>"class="btn btn-danger">DEL</a>
+            
+          </td>
+
       </tr>
       <?php
                 }

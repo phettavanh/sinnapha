@@ -1,25 +1,30 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = htmlspecialchars($_POST['first_name']);
-    $last_name = htmlspecialchars($_POST['last_name']);
-    $room = htmlspecialchars($_POST['room']);
-    $student_id = htmlspecialchars($_POST['student_id']);
-    $father_name = htmlspecialchars($_POST['father_name']);
-    $mother_name = htmlspecialchars($_POST['mother_name']);
-    $phone = htmlspecialchars($_POST['phone']);
+
+require'db.php';
+
+
+    $re_id = htmlspecialchars($_POST['re-id']);
+    $st_id = htmlspecialchars($_POST['st_id']);
     $gender = htmlspecialchars($_POST['gender']);
-    $dob = htmlspecialchars($_POST['dob']);
-    $date = htmlspecialchars($_POST['date']);
-    $year = htmlspecialchars($_POST['year']);
-    
+    $st_name = htmlspecialchars($_POST['st_name']);
+    $st_dateborn = htmlspecialchars($_POST['st_dateborn']);
+    $st_ethnicity= htmlspecialchars($_POST['st_ethnicity']);
+    $st_tel = htmlspecialchars($_POST['st_tel']);
+    $Parent= htmlspecialchars($_POST['Parent']);
+    $Par_tel = htmlspecialchars($_POST['Par_tel']);
+    $room_id= htmlspecialchars($_POST['room_id']);
+    $aca_id= htmlspecialchars($_POST['aca_id']);
+    $money = htmlspecialchars($_POST['money']);
     $id = uniqid();
     
-    $entry = "$first_name,$last_name,$room,$student_id,$father_name,$mother_name,$phone,$gender,$dob,$date,$year\n";
-    file_put_contents('registrations.txt', $entry, FILE_APPEND);
+    $sql = "INSERT INTO register VALUES(
+'$re_id','$st_id','$gender','$st_name','$st_lastname','$st_dateborn','$st_ethnicity','$st_tel','$Parent','$Par_tel', $room_id, $aca_id,money)";
     
-    header("Location: view_registrations.php");
-    exit();
-} else {
-    echo "Invalid request method.";
-}
+    mysqli_query($con,$sql);
+echo mysqli_error ($con);
+header('location:student.php');
+//echo $sql;
+
+
+ 
 ?>
