@@ -1,0 +1,4 @@
+{
+    "db2forzosdeveloperextension.db2sqlservice.dependencies": "db2jcc_license_cisuz.jar",
+    "db2forzosdeveloperextension.db2sqlservice.port": "8080"
+}
